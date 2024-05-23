@@ -27,7 +27,7 @@ export async function fetchRevenue() {
 
     console.log('Data fetch completed after 3 seconds.');
 
-    const data = await sql<LatestInvoiceRaw>`
+    const data = await sql<Revenue>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
@@ -176,7 +176,7 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
-
+    console.log(invoice);
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
