@@ -14,7 +14,8 @@ export type Movies = {
 
 export type MovieFormOrderBy = {
   title: string,
-  orderBy: string,
+  description: string,
+  image_url: string,
 }
 
 export type Customer = {

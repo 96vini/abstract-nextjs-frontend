@@ -25,16 +25,17 @@ export async function fetchRevenue() {
   }
 }
 
-export async function fetchMovies(orderBy: string) {
-  if(orderBy === 'popularity') {
-    const data = [
-      { title: 'Jaws', description: 'lorem ipsum dolor sit amet' },
-      { title: 'Jaws', description: 'lorem ipsum dolor sit amet' },
-      { title: 'Jaws', description: 'lorem ipsum dolor sit amet' },
+export async function fetchMovies() {
+  const data = [
+      { title: 'Barbie', description: 'lorem ipsum dolor sit amet', image_url: 'https://mir-s3-cdn-cf.behance.net/project_modules/hd/ce578c174088799.649bb208e091f.png' },
+      { title: 'Django', description: 'lorem ipsum dolor sit amet', image_url: 'https://images.justwatch.com/poster/307512771/s718/django-livre.jpg' },
+      { title: 'The wolf of street', description: 'lorem ipsum dolor sit amet', image_url: 'https://br.web.img2.acsta.net/pictures/13/12/30/18/11/111145.jpg' },
+      { title: 'Moonlight', description: 'lorem ipsum dolor sit amet', image_url: 'https://posterhouse.org/wp-content/uploads/2021/05/moonlight_0.jpg' },
+      { title: 'Jaws', description: 'lorem ipsum dolor sit amet', image_url: 'https://m.media-amazon.com/images/I/61aXrMrKlyS._AC_UF894,1000_QL80_.jpg' },
+      { title: 'Silence of Lambs', description: 'lorem ipsum dolor sit amet', image_url: 'https://posterhouse.org/wp-content/uploads/2021/05/silence_of_the_lambs_0.jpg' },
+      { title: 'Parasite', description: 'lorem ipsum dolor sit amet', image_url: 'https://parade.com/.image/t_share/MTkwNTgxMjk2NzkxODg5MDIx/parasite2.jpg' },
   ];
-
-    return data;
-  }
+  return data;
 }
 
 export async function fetchLatestInvoices() {
